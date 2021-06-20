@@ -33,7 +33,7 @@ public class PersonDTO {
 
     private String birthDate;
 
-    @Valid
+    @Valid/*Hibernate vai validar todos os campos de PhoneDTO*/
     @NotEmpty
     private List<PhoneDTO> phones;
 }

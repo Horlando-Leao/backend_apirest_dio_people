@@ -6,7 +6,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
-@Mapper
+//Biblioteca Map Sctructe -converte string para um tipo de data
+@Mapper/*Conversão de um objeto DTO para uma entidade e vice-versa*/
 public interface PersonMapper {
 
     PersonMapper INSTANCE = Mappers.getMapper(PersonMapper.class);
