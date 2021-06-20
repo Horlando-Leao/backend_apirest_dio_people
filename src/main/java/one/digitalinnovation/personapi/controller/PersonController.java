@@ -34,7 +34,7 @@ public class PersonController {
         return "This is test of get api";
     }
 
-    @PostMapping
+    @PostMapping("/")
     @ResponseStatus(HttpStatus.CREATED)
     public MessageResponseDTO createPerson(@RequestBody @Valid PersonDTO personDTO) {
         return personService.createPerson(personDTO);
