@@ -11,41 +11,95 @@ Foram abordados os seguintes tópicos:
 * Desenvolvimento de testes unitários para validação das funcionalidades
 * Implantação do sistema na nuvem através do Heroku
 
-Test na url: https://api-rest-people.herokuapp.com/api/v1/people/test
-<h3> Objetos JSON para test de CRUDS </h3> 
+Teste se o servidor está ativo na url: https://api-rest-people.herokuapp.com/api/v1/people/test </br>
+URL da API REST: https://api-rest-people.herokuapp.com/api/v1/people/
+
+<h3> Objetos JSON para test de CRUDS. {var} = variável </h3> 
+
 <h4>Inserir</h4>
+<h4>Method request: POST</h4>
+https://api-rest-people.herokuapp.com/api/v1/people/
+
+Exemplo de objeto JSON
 
 ```JSON
 {
-  "OPA":"OPA"
+    "firstName":"Horlando",
+    "lastName":"Peleias",
+    "cpf":"710.921.264-57",
+    "phones":[
+        {
+            "type":"MOBILE",
+            "number":"(81)980808080"
+        },
+        {
+            "type":"MOBILE",
+            "number":"(81)910101010"
+        },
+        {
+            "type":"MOBILE",
+            "number":"(81)920202020"
+        }
+    ]
 }
 ```
 
 <h4>Consultar</h4>
+<h4>Method request: GET</h4>
 
-```JSON
-{
-  "OPA":"OPA"
-}
+```txt
+https://api-rest-people.herokuapp.com/api/v1/people/{var}
+
+exemplos:
+https://api-rest-people.herokuapp.com/api/v1/people/1
+https://api-rest-people.herokuapp.com/api/v1/people/2
 ```
 
 <h4>Modificar</h4>
+<h4>Method request: PUT</h4>
+
+<b>Na atualização é necessario colocar variável na url da requisição igual a variável no atributo id do corpo da requisição</b>
+
+```txt
+https://api-rest-people.herokuapp.com/api/v1/people/{var}
+```
 
 ```JSON
 {
-  "OPA":"OPA"
+    "id":{var},
+    "firstName":"Horlando",
+    "lastName":"Peleias",
+    "cpf":"710.921.264-57",
+    "phones":[
+        {
+            "type":"MOBILE",
+            "number":"(81)980808080"
+        },
+        {
+            "type":"MOBILE",
+            "number":"(81)910101010"
+        },
+        {
+            "type":"MOBILE",
+            "number":"(81)920202020"
+        }
+    ]
 }
 ```
 
 <h4>Deletar</h4>
+<h4>Method request: DELETE</h4>
 
-```JSON
-{
-  "OPA":"OPA"
-}
+```txt
+https://api-rest-people.herokuapp.com/api/v1/people/<var>
+
+exemplos:
+https://api-rest-people.herokuapp.com/api/v1/people/1
+https://api-rest-people.herokuapp.com/api/v1/people/2
 ```
 
 
+<h2>Para ambientes de desenvolvimento local </h2>
 Para executar o projeto no terminal, digite o seguinte comando:
 
 ```shell script
