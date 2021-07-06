@@ -11,6 +11,41 @@ Foram abordados os seguintes tópicos:
 * Desenvolvimento de testes unitários para validação das funcionalidades
 * Implantação do sistema na nuvem através do Heroku
 
+Test na url: https://api-rest-people.herokuapp.com/api/v1/people/test
+<h3> Objetos JSON para test de CRUDS </h3> 
+<h4>Inserir</h4>
+
+```JSON
+{
+  "OPA":"OPA"
+}
+```
+
+<h4>Consultar</h4>
+
+```JSON
+{
+  "OPA":"OPA"
+}
+```
+
+<h4>Modificar</h4>
+
+```JSON
+{
+  "OPA":"OPA"
+}
+```
+
+<h4>Deletar</h4>
+
+```JSON
+{
+  "OPA":"OPA"
+}
+```
+
+
 Para executar o projeto no terminal, digite o seguinte comando:
 
 ```shell script
